@@ -8,7 +8,7 @@
 body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
-  background-color: var(--Dark-Blue);
+  background-color: var(--main);
   height: 100vh;
   color: var(--White);
 }
@@ -17,18 +17,19 @@ body {
 
   /* Primary */
 
-  --Dark-Blue: hsl(217, 28%, 15%);
-  --Dark-Blue: hsl(218, 28%, 13%);
-  --Dark-Blue: hsl(216, 53%, 9%);
-  --Dark-Blue: hsl(219, 30%, 18%);
+  --intro: hsl(217, 28%, 15%);
+  --main: hsl(218, 28%, 13%);
+  --footer: hsl(216, 53%, 9%);
+  --testimonials: hsl(219, 30%, 18%);
 
   /* Accent */
 
-  --Cyan: hsl(176, 68%, 64%);
-  --Blue: hsl(198, 60%, 50%);
+  --Cyan: #64e1d9;
+  --Blue: hsl(198, 61%, 50%);
 
   /* Neutral */
   --White: hsl(0, 0%, 100%);
+
 }
 
 h1,
@@ -45,6 +46,7 @@ a {
 }
 
 .wrapper {
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -53,6 +55,7 @@ a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   padding-top: 40px;
+  padding: 3em;
 }
 
 .section1 nav {
@@ -70,11 +73,29 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   margin-top: 100px;
+
 }
 
 .section2 img {
   align-self: center;
   justify-self: center;
+  background-image: url(/images/bg-curvy-desktop.svg);
+}
+
+a.button {
+  background: rgb(50, 158, 204);
+  background: linear-gradient(288deg, rgba(50, 158, 204, 1) 46%, rgba(100, 225, 217, 1) 100%);
+  border: none;
+  color: var(--Dark-Cyan);
+  font-weight: 700;
+  padding: 10px 70px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.068);
 }
 
 .section2-text {
@@ -102,4 +123,64 @@ a {
   justify-self: center;
   text-align: center;
   padding: 3em;
+}
+
+.row2-left {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  padding: 3em;
+}
+
+.row2-right {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  padding: 3em;
+}
+
+.section4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: auto;
+  padding: 3em;
+}
+
+.section4-left {
+  align-self: center;
+  justify-self: center;
+}
+
+.section4-right {
+  align-self: center;
+  justify-self: center;
+  padding: 3em;
+}
+
+.section5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.section5-col-1 {
+  background-color: var(--testimonials);
+}
+
+.section5-col-2 {
+  background-color: var(--testimonials);
+}
+
+.section5-col-3 {
+  background-color: var(--testimonials);
+}
+
+.section6 {
+  display: grid;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr;
+  background-color: var(--footer)
 }
