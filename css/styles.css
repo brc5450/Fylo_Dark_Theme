@@ -1,7 +1,11 @@
-body {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+
+body {
   font-size: 14px;
   font-family: 'Open Sans', sans-serif;
   background-color: var(--Dark-Blue);
@@ -37,5 +41,65 @@ h6 {
 }
 
 a {
-  color: yellow;
+  color: rgb(0, 225, 255);
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.section1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  padding-top: 40px;
+}
+
+.section1 nav {
+  align-self: end;
+  justify-self: end;
+}
+
+.section1 nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.section2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 100px;
+}
+
+.section2 img {
+  align-self: center;
+  justify-self: center;
+}
+
+.section2-text {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.section3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin-top: 150px;
+}
+
+.row1-left {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  padding: 3em;
+}
+
+.row1-right {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  padding: 3em;
 }
