@@ -4,23 +4,23 @@
   padding: 0;
 }
 
-
 body {
-  font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.8em;
   background-color: var(--main);
-  height: 100vh;
+  height: 100%;
   color: var(--White);
 }
 
 :root {
-
   /* Primary */
 
-  --intro: hsl(217, 28%, 15%);
-  --main: hsl(218, 28%, 13%);
-  --footer: hsl(216, 53%, 9%);
-  --testimonials: hsl(219, 30%, 18%);
+  --intro: #1b2330;
+  --main: #191f2b;
+  --footer: #0a1423;
+  --testimonials: #20293b;
 
   /* Accent */
 
@@ -29,7 +29,6 @@ body {
 
   /* Neutral */
   --White: hsl(0, 0%, 100%);
-
 }
 
 h1,
@@ -38,33 +37,36 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  line-height: 1.3em;
 }
 
 a {
   color: rgb(0, 225, 255);
 }
 
-.wrapper {
+.container1 {
+  width: 100vw;
+  background-color: var(--intro);
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 30px;
+  background-color: #1b2330;
   max-width: 1440px;
   margin: 0 auto;
+}
+
+header nav {
+  align-self: center;
+  justify-self: end;
   padding: 30px;
 }
 
-.section1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  padding-top: 40px;
-  padding: 3em;
-}
-
-.section1 nav {
-  align-self: end;
-  justify-self: end;
-}
-
-.section1 nav li {
+header nav li {
   display: inline-block;
   margin-right: 20px;
 }
@@ -74,15 +76,20 @@ nav li a {
   color: var(--White);
 }
 
+.container2 {
+  width: 100vw;
+  background-color: var(--intro);
+  background: url(/images/bg-curvy-desktop.svg) bottom center no-repeat, #1b2330;
+  background-size: 100%;
+  padding-bottom: 50px;
+}
+
 .section2 {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  margin-top: 100px;
-}
-
-.section2 a.button {
-  margin-top: 30px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .section2 img {
@@ -90,9 +97,21 @@ nav li a {
   justify-self: center;
 }
 
+.section2 a.button {
+  margin-top: 30px;
+}
+
+.section2 .button {
+  margin-bottom: 50px;
+}
+
 a.button {
   background: rgb(50, 158, 204);
-  background: linear-gradient(288deg, rgba(50, 158, 204, 1) 46%, rgba(100, 225, 217, 1) 100%);
+  background: linear-gradient(
+    288deg,
+    rgba(50, 158, 204, 1) 46%,
+    rgba(100, 225, 217, 1) 100%
+  );
   border: none;
   color: var(--Dark-Cyan);
   font-weight: 700;
@@ -110,49 +129,68 @@ a.button {
   align-self: center;
   justify-self: center;
   text-align: center;
+  padding-top: 50px;
+}
+
+.section2-text h1 {
+  margin-bottom: 15px;
+}
+
+.container3 {
+  width: 100vw;
+  background-color: #191f2b;
 }
 
 .section3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin-top: 150px;
-  background-image: url(/images/bg-curvy-desktop.svg);
+  margin: 0 auto;
+  max-width: 1440px;
+  background-color: #191f2b;
 }
 
 .row1-left {
   align-self: center;
   justify-self: center;
   text-align: center;
-  padding: 3em;
+  padding: 5em;
 }
 
 .row1-right {
   align-self: center;
   justify-self: center;
   text-align: center;
-  padding: 3em;
+  padding: 5em;
 }
 
 .row2-left {
   align-self: center;
   justify-self: center;
   text-align: center;
-  padding: 3em;
+  padding: 5em;
 }
 
 .row2-right {
   align-self: center;
   justify-self: center;
   text-align: center;
-  padding: 3em;
+  padding: 5em;
+}
+
+.container4 {
+  width: 100vw;
+  background-color: #191f2b;
 }
 
 .section4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
-  padding: 3em;
+  padding: 5em;
+  max-width: 1440px;
+  margin: 0 auto;
+  grid-column-gap: 125px;
 }
 
 .section4-left {
@@ -163,16 +201,37 @@ a.button {
 .section4-right {
   align-self: center;
   justify-self: center;
-  padding: 3em;
 }
 
 /* Testimonials */
+
+.container-quote {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.quote-section {
+  margin-bottom: -150px;
+}
+
+.quotes {
+  margin-left: 150px;
+}
+
+.container5 {
+  width: 100vw;
+  background-color: #191f2b;
+  margin-top: -100px;
+}
 
 .section5 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-column-gap: 2rem;
-  margin-top: -15px;
+  margin-top: -250px;
+  padding: 8em;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .profile {
@@ -183,7 +242,6 @@ a.button {
 .section5-col-1 {
   background-color: var(--testimonials);
   padding: 2rem;
-  margin-left: 10px;
 }
 
 .section5-col-2 {
@@ -194,6 +252,30 @@ a.button {
 .section5-col-3 {
   background-color: var(--testimonials);
   padding: 2rem;
+}
+
+.section5-col-1 .title {
+  margin-top: 3em;
+}
+
+.section5-col-1 img {
+  margin-right: 1.2em;
+}
+
+.section5-col-2 img {
+  margin-right: 1.2em;
+}
+
+.section5-col-3 img {
+  margin-right: 1.2em;
+}
+
+.section5-col-2 .title {
+  margin-top: 3em;
+}
+
+.section5-col-3 .title {
+  margin-top: 3em;
 }
 
 .section6 {
@@ -216,7 +298,7 @@ form {
   justify-content: center;
 }
 
-form>input {
+form > input {
   background: var(--White);
   border: none;
   color: var(--Dark-Cyan);
@@ -231,7 +313,6 @@ form>input {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.068);
 }
 
-
 footer {
   margin-top: -100px;
 }
@@ -240,7 +321,8 @@ footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr 1fr;
-  grid-template-areas: "logo logo logo logo logo"
+  grid-template-areas:
+    "logo logo logo logo logo"
     "col-1 col-2 col-3 col-4 col-5";
   background-color: var(--footer);
   padding: 150px;
