@@ -292,6 +292,15 @@ a.button {
   line-height: 1.5rem;
 }
 
+.call-to-action h2 {
+  margin-bottom: 1.5em;
+}
+
+.call-to-action p {
+  margin-bottom: 1.5em;
+  line-height: 1.6em;
+}
+
 form {
   display: flex;
   justify-content: center;
