@@ -53,7 +53,7 @@ a {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   padding: 30px;
   background-color: #1b2330;
   max-width: 1440px;
@@ -63,7 +63,12 @@ header {
 header nav {
   align-self: center;
   justify-self: end;
-  padding: 30px;
+  padding: 10px;
+}
+
+.header-logo {
+  width: 150px;
+  align-self: center;
 }
 
 header nav li {
@@ -80,7 +85,7 @@ nav li a {
   width: 100vw;
   background-color: var(--intro);
   background: url(/images/bg-curvy-desktop.svg) bottom center no-repeat, #1b2330;
-  background-size: 100%;
+  background-size: 100% 50%;
   padding-bottom: 50px;
 }
 
@@ -94,8 +99,6 @@ nav li a {
 
 .section2 img {
   margin: 0 auto;
-  /* align-self: center;
-  justify-self: center; */
 }
 
 .section2 a.button {
@@ -125,10 +128,7 @@ a.button {
 }
 
 .section2-text {
-  /* align-self: center;
-  justify-self: center; */
   text-align: center;
-  padding-top: 50px;
 }
 
 .section2-text h1 {
@@ -314,46 +314,37 @@ form>input {
 
 footer {
   margin-top: -100px;
+  background-color: var(--footer);
 }
 
 .footer-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 175px;
+  padding: 8em;
   display: grid;
+  grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "logo logo logo logo logo"
-    "col-1 col-2 col-3 col-4 col-5";
-  background-color: var(--footer);
-  padding: 150px;
-  line-height: 2em;
 }
 
 .footer-logo {
-  grid-area: logo;
-}
-
-.footer-col-1 {
-  grid-area: col-1;
+  grid-column: 1/7;
 }
 
 .footer-col-2 {
   justify-self: center;
-  grid-area: col-2;
 }
 
 .footer-col-3 {
   justify-self: center;
-  grid-area: col-3;
 }
 
 .footer-col-4 {
   justify-self: center;
-  grid-area: col-4;
 }
 
 .footer-col-5 {
   justify-self: center;
-  grid-area: col-5;
 }
 
 /*
@@ -364,7 +355,22 @@ footer {
 
   .intro-image {
     width: 100%;
-    padding: 30px;
+    padding: 3em;
+  }
+
+  .container2 {
+    background-color: var(--intro);
+    background: url(/images/bg-curvy-desktop.svg) bottom center no-repeat, #1b2330;
+    padding-bottom: 50px;
+  }
+
+  .section2-text h1 {
+    padding: 1em;
+  }
+
+  .section2-text {
+    text-align: center;
+    padding: 2em;
   }
 
   .section3 {
@@ -387,6 +393,15 @@ footer {
     margin: 0 auto;
     margin-bottom: 2rem;
   }
+
+  .quote-section {
+    margin-bottom: 0;
+  }
+
+  .quotes {
+    margin-left: 85px;
+  }
+
 
   .section5 {
     display: grid;
@@ -442,7 +457,8 @@ footer {
 
   form>input {
     width: 100%;
-    padding: 15px 70px;
+    padding: 15px 20px;
+    text-align: left;
   }
 
   a.button#free-button {
@@ -463,4 +479,40 @@ footer {
     border-radius: 30px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.068);
   }
+
+  .footer-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4em;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-row-gap: 3em;
+  }
+
+  .footer-logo {
+    padding-top: 5em;
+    grid-column: 1/2;
+  }
+
+  .footer-col-1 {
+    justify-self: start;
+  }
+
+  .footer-col-2 {
+    justify-self: start;
+  }
+
+  .footer-col-3 {
+    justify-self: start;
+  }
+
+  .footer-col-4 {
+    justify-self: start;
+  }
+
+  .footer-col-5 {
+    justify-self: center;
+  }
+
 }
